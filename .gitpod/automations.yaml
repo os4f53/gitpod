@@ -2,7 +2,7 @@ tasks:
     hello:
         name: Hello World
         command: |
-            echo "Hello, World!"
+            echo "Hello, World!!"
         triggeredBy:
         - manual
 
@@ -13,15 +13,15 @@ tasks:
             git config --global user.name "Omar Sattari"
         triggeredBy:
         - manual
-        - postEnvironmentStart
-        # - postDevcontainerStart
+        # - postEnvironmentStart
+        - postDevcontainerStart
 
     install-uv:
         name: Install uv
         command: |
             curl -LsSf https://astral.sh/uv/install.sh | sh
         triggeredBy:
-        - postEnvironmentStart
+        - postDevcontainerStart
 
 # services:
 #     backend:

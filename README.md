@@ -13,3 +13,8 @@ They can be applied with
 gitpod automations update -s .gitpod/automations.yaml
 ```
 
+Automations can be run manually:
+```
+gitpod automations tasks list
+gitpod automations tasks start hello
+```
