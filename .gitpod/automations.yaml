@@ -1,0 +1,52 @@
+tasks:
+    hello:
+        name: Hello World
+        command: |
+            echo "Hello, World!"
+        triggeredBy:
+        - manual
+
+    set-git-persona:
+        name: Set git Persona
+        command: |
+            git config --global user.email "osattari@live.com"
+            git config --global user.name "Omar Sattari"
+        triggeredBy:
+        - manual
+        - postEnvironmentStart
+        # - postDevcontainerStart
+
+    install-uv:
+        name: Install uv
+        command: |
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+        triggeredBy:
+        - postEnvironmentStart
+
+# services:
+#     backend:
+#         name: Backend Service
+#         description: Example service simulating a backend
+#         commands:
+#             start: |
+#                 echo "Starting backend service..."
+#                 touch /tmp/backend.started
+#                 while true; do
+#                     sleep 1
+#                     date
+#                 done
+#             ready: |
+#                 if [ -f /tmp/backend.started ]; then
+#                     echo "Backend service is ready"
+#                     exit 0
+#                 else
+#                     echo "Backend service is not ready"
+#                     exit 1
+#                 fi
+#             # stop: |
+#             # 	echo "Stopping backend service..."
+#             # 	rm /tmp/backend.started
+#             #   pkill backend
+#         triggeredBy:
+#             - postEnvironmentStart
+#             # - postDevcontainerStart
