@@ -9,7 +9,8 @@
 	"build": {
         "context": ".",
         "dockerfile": "Dockerfile"
-    }
+    },
+
 	// Features add additional features to your environment. See https://containers.dev/features
 	// Beware: features are not supported on all platforms and may have unintended side-effects.
 	// "features": {
@@ -17,4 +18,16 @@
     //     "moby": false
     //   }
     // }
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "workbench.colorTheme": "Visual Studio Dark",
+                "redhat.telemetry.enabled": false,
+                "editor.fontSize": 16,
+                "editor.tabSize": 2,
+                "terminal.integrated.fontSize": 14
+            }
+        }
+    }
 }
