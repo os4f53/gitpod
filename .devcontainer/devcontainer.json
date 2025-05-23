@@ -26,7 +26,22 @@
                 "redhat.telemetry.enabled": false,
                 "editor.fontSize": 16,
                 "editor.tabSize": 2,
-                "terminal.integrated.fontSize": 14
+                "terminal.integrated.fontSize": 14,
+                "workbench.startupEditor": "none",
+                "search.exclude": {
+                  "**/node_modules": true,
+                  "**/bower_components": true,
+                  "**/env": true,
+                  "**/venv": true
+                },
+                  "files.watcherExclude": {
+                  "**/.git/objects/**": true,
+                  "**/.git/subtree-cache/**": true,
+                  "**/node_modules/**": true,
+                  "**/env/**": true,
+                  "**/venv/**": true,
+                  "env-*": true
+                }
             }
         }
     }
