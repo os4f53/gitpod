@@ -3,7 +3,7 @@
     "redhat.telemetry.enabled": false,
     "editor.fontSize": 16,
     "editor.tabSize": 2,
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 16,
     "workbench.startupEditor": "none",
     "search.exclude": {
       "**/node_modules": true,
