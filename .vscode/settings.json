@@ -18,5 +18,6 @@
       "**/env/**": true,
       "**/venv/**": true,
       "env-*": true
-    }
+    },
+    "continue.telemetryEnabled": false
 }
